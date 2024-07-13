@@ -105,7 +105,7 @@ header .changeExamLevelAgain label select option{
     background-color: rgb(198, 50, 50);
 }
 main{
-    width: 640px;
+    width: 650px;
     margin: auto;
     height: calc(100vh - 70px);
     display: flex;
