@@ -361,9 +361,9 @@ function QuestionsInnerHtml(jsitems) {
                     if (countUp == rightAnswers && rightanswerUp >= rightanswersNumber && wronganswerUp >= wronganswersNumber&&isOPN==false) {
                         document.querySelector(".resultsShow .showResultBtn").style.pointerEvents = 'all';
                         document.querySelector(".resultsShow .showResultBtn").style.cursor = 'pointer';
-                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.opacity = '1';
-                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginTop = '0px';
-                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginBottom = '20px';
+                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.opacity = '1';
+                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginTop = '0px';
+                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginBottom = '20px';
                         isOPN = true;
                     }
                     if (isOPN == true) {
