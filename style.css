@@ -401,7 +401,40 @@ main{
     min-width: 50%;
     max-width: 700px;
     display: flex;align-items: center;
+    flex-direction: column;
     gap: 10px;
+}
+.resultsShow .showReslut_QuestAns .shareWithFacebook::after{
+    content: "شارك النتيجة";
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+}
+.resultsShow .showReslut_QuestAns .shareWithFacebook{
+    width: 90px;
+    height:90px;
+    background-color: #1877f2;
+    position: absolute;
+    left: 20px;
+    display: flex;align-items: center;justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 50%;
+    margin-top: 200px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 1s;
+}
+@keyframes showBtnShareFace{
+    0%{
+        opacity: 0;
+        margin-top: 200px;
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
 }
 .resultsShow .showResultBtn{
     width: 250px;

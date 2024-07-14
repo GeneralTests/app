@@ -300,8 +300,8 @@ function QuestionsInnerHtml(jsitems) {
                             <atricle class='resultDataShow'>
                                 <canvas id='DrawResultCircles' width='125' height='125'></canvas>
                                 <section class='dataText'>
-                                    <div class='rightAnswers'><span id='rightAnswersNumber'><ul></ul></span> عدد الاجابات الصحيحة</div>
-                                    <div class='wrongAnswers'><span id='wrongAnswersNumber'><ul></ul></span> عدد الاجابات الخاطئة</div>
+                                      <div class='rightAnswers'><span id='rightAnswersNumber'><ul></ul></span> عدد الاجابات الصحيحة</div>
+                                  <div class='wrongAnswers'><span id='wrongAnswersNumber'><ul></ul></span> عدد الاجابات الخاطئة</div>
                                 </section>
                             </atricle>
                         </section>
@@ -361,7 +361,42 @@ function QuestionsInnerHtml(jsitems) {
                     if (countUp == rightAnswers && rightanswerUp >= rightanswersNumber && wronganswerUp >= wronganswersNumber&&isOPN==false) {
                         document.querySelector(".resultsShow .showResultBtn").style.pointerEvents = 'all';
                         document.querySelector(".resultsShow .showResultBtn").style.cursor = 'pointer';
+                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.opacity = '1';
+                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginTop = '0px';
+                        document.querySelector("..resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginBottom = '20px';
                         isOPN = true;
+                    }
+                    if (isOPN == true) {
+                        var meta = document.createElement('meta');
+                        meta.setAttribute("property","og:url");
+                        meta.setAttribute("content",`${encodeURI(window.location) }`);
+                        document.head.appendChild(meta);
+                        domtoimage.toPng(document.body)
+                            .then(function (dataUrl) {
+                                var meta = document.createElement('meta');
+                                meta.setAttribute("property", "og:image");
+                                meta.setAttribute("content", `${dataUrl}`);
+                                document.head.appendChild(meta);
+                        })
+                        .catch(function (error) {
+                                alert("There is an error please, reload the page and retry again");
+                        });
+                        let script = document.createElement("script");
+                        script.innerText = `
+                        <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));
+                        </script>`;
+                        document.body.append(script);
+                        document.querySelector(".showReslut_QuestAns").innerHTML =+ `
+                        <div class="shareWithFacebook">
+                                <div id="fb-root"></div>
+                                <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count"></div>
+                            </div>`
                     }
                 }, 300)
                 // finsh inner right /wrong answer as text with an animation
