@@ -33,7 +33,7 @@ window.onload = () => {
         </section>
         `;
         document.body.append(HeaderHTML)
-        document.querySelector(".changeExamLevelAgain").style.top = '64px';
+        document.querySelector(".changeExamLevelAgain").remove();
         document.body.classList.add("Body_BG_img_class")
         document.body.innerHTML += `
             <section class="WantToRelaodExam">
@@ -289,7 +289,7 @@ function QuestionsInnerHtml(jsitems) {
                     },4300)
             // export result
             setTimeout(() => {
-               document.querySelector("main").innerHTML = `
+                document.querySelector("main").innerHTML = `
                     <section class="resultsShow">
                     <article class="content">
                         <section class='congratoilationContent'>
@@ -361,48 +361,13 @@ function QuestionsInnerHtml(jsitems) {
                     if (countUp == rightAnswers && rightanswerUp >= rightanswersNumber && wronganswerUp >= wronganswersNumber&&isOPN==false) {
                         document.querySelector(".resultsShow .showResultBtn").style.pointerEvents = 'all';
                         document.querySelector(".resultsShow .showResultBtn").style.cursor = 'pointer';
-                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.opacity = '1';
-                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginTop = '0px';
-                        document.querySelector(".resultsShow .showReslut_QuestAns .shareWithFacebook").style.marginBottom = '20px';
                         isOPN = true;
                     }
-                    if (isOPN == true) {
-                        var meta = document.createElement('meta');
-                        meta.setAttribute("property","og:url");
-                        meta.setAttribute("content",`${encodeURI(window.location) }`);
-                        document.head.appendChild(meta);
-                        domtoimage.toPng(document.body)
-                            .then(function (dataUrl) {
-                                var meta = document.createElement('meta');
-                                meta.setAttribute("property", "og:image");
-                                meta.setAttribute("content", `${dataUrl}`);
-                                document.head.appendChild(meta);
-                        })
-                        .catch(function (error) {
-                                alert("There is an error please, reload the page and retry again");
-                        });
-                        let script = document.createElement("script");
-                        script.innerText = `
-                        <script>(function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-                        fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));
-                        </script>`;
-                        document.body.append(script);
-                        document.querySelector(".showReslut_QuestAns").innerHTML =+ `
-                        <div class="shareWithFacebook">
-                                <div id="fb-root"></div>
-                                <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count"></div>
-                            </div>`
-                    }
                 }, 300)
-                // finsh inner right /wrong answer as text with an animation
+                // ShowshareBtn();
             },5000)   
         }
-        }        
+            }       
             if (jsitems[i]["userAnswer"] != "") {
                 if (i + 1 != jsitemsLength) {
                     document.querySelector(`.Exam`).style.animationName = 'Leave';
@@ -602,3 +567,45 @@ document.querySelector("#wrongAnswersNumber ul").style.bottom = '0px';
 document.querySelector("#rightAnswersNumber ul").style.bottom = '0px';
 // finsh inner right /wrong answer as text with no animation
 }
+// function ShowshareBtn() {
+//         var meta = document.createElement('meta');
+//         meta.setAttribute("property","og:url");
+//         meta.setAttribute("content",`${encodeURI(window.location) }`);
+//         document.head.appendChild(meta);
+//         domtoimage.toPng(document.querySelector("main"))
+//             .then(function (dataUrl) {
+//                 console.log(dataUrl)
+//                 var meta = document.createElement('meta');
+//                 meta.setAttribute("property", "og:image");
+//                 meta.setAttribute("content", `${dataUrl}`);
+//                 // document.head.appendChild(meta);
+//         })
+//         .catch(function (error) {
+//                 alert("There is an error please, reload the page and retry again");
+//         });
+//     setTimeout(() => {
+//             let div = document.createElement("div");
+//             div.className = 'shareWithFacebook';
+//             div.innerHTML = `
+//               <div id="fb-root"></div>
+//               <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count"></div>`;
+//             document.querySelector(".showReslut_QuestAns").append(div);
+//             document.querySelector(".shareWithFacebook").style.opacity = '1';
+//             document.querySelector(".shareWithFacebook").style.marginTop = '0px';
+//             document.querySelector(".shareWithFacebook").style.marginBottom = '20px';
+//             let script = document.createElement("script");
+//             script.innerHTML = `
+//             (
+//                 function (d, s, id) {
+//                     var js, fjs = d.getElementsByTagName(s)[0];
+//                     if (d.getElementById(id)) return;
+//                     js = d.createElement(s); js.id = id;
+//                     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+//                     fjs.parentNode.insertBefore(js, fjs);
+//                 }
+//                 (document, 'script', 'facebook-jssdk')
+//                 )
+//                 `;
+//                 document.body.append(script);
+//     },2000)
+// }
