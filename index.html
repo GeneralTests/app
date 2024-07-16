@@ -27,16 +27,19 @@
     <meta property="og:url" content="https://generaltests.github.io/app/">
 </head>
 <body>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ar_AR/sdk.js#xfbml=1&version=v20.0"
-    nonce="xQi9cZEm"></script>
-
-    <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="" data-size=""> <a
-            target="_blank"
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fgeneraltests.github.io%2Fapp%2F&src=sdkpreparse"
-            class="fb-xfbml-parse-ignore"> مشاركة </a></div>
     <!-- To Add  a new Question go to json file and insert it -->
     <!-- Add a ready interface with some notes("
     لا تنسى ان تتأكد من كل إجابة قبل أن تنتقل إلى السؤال التالي")  -->
+    <div id="fb-root"></div>
+    <script> (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk')); </script>
+    <!-- كود زر المشاركة الخاص بك -->
+    <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count">
+    </div>
 </body>
 </html>
+    <!-- تحميل SDK Facebook لـ JavaScript -->
