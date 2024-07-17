@@ -22,7 +22,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Your Website Title" />
     <meta property="og:description" content="Your description" />
-    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
     <!-- <script src="main.js"></script> -->
     <!-- <script src="interface.js"></script> -->
     <!-- <script src="DomToImage.js"></script> -->
@@ -31,16 +30,20 @@
     <!-- To Add  a new Question go to json file and insert it -->
     <!-- Add a ready interface with some notes("
     لا تنسى ان تتأكد من كل إجابة قبل أن تنتقل إلى السؤال التالي")  -->
-    <div id="fb-root"></div>
-    <script> (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk')); </script>
-    <!-- كود زر المشاركة الخاص بك -->
-    <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count">
-    </div>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your share button code -->
+<div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count">
+</div>
+
 </body>
 </html>
     <!-- تحميل SDK Facebook لـ JavaScript -->
