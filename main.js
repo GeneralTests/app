@@ -364,7 +364,7 @@ function QuestionsInnerHtml(jsitems) {
                         isOPN = true;
                     }
                 }, 300)
-                // ShowshareBtn();
+                ShowshareBtn();
             },5000)   
         }
             }       
@@ -567,45 +567,42 @@ document.querySelector("#wrongAnswersNumber ul").style.bottom = '0px';
 document.querySelector("#rightAnswersNumber ul").style.bottom = '0px';
 // finsh inner right /wrong answer as text with no animation
 }
-// function ShowshareBtn() {
-//         var meta = document.createElement('meta');
-//         meta.setAttribute("property","og:url");
-//         meta.setAttribute("content",`${encodeURI(window.location) }`);
-//         document.head.appendChild(meta);
-//         domtoimage.toPng(document.querySelector("main"))
-//             .then(function (dataUrl) {
-//                 console.log(dataUrl)
-//                 var meta = document.createElement('meta');
-//                 meta.setAttribute("property", "og:image");
-//                 meta.setAttribute("content", `${dataUrl}`);
-//                 // document.head.appendChild(meta);
-//         })
-//         .catch(function (error) {
-//                 alert("There is an error please, reload the page and retry again");
-//         });
-//     setTimeout(() => {
-//             let div = document.createElement("div");
-//             div.className = 'shareWithFacebook';
-//             div.innerHTML = `
-//               <div id="fb-root"></div>
-//               <div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count"></div>`;
-//             document.querySelector(".showReslut_QuestAns").append(div);
-//             document.querySelector(".shareWithFacebook").style.opacity = '1';
-//             document.querySelector(".shareWithFacebook").style.marginTop = '0px';
-//             document.querySelector(".shareWithFacebook").style.marginBottom = '20px';
-//             let script = document.createElement("script");
-//             script.innerHTML = `
-//             (
-//                 function (d, s, id) {
-//                     var js, fjs = d.getElementsByTagName(s)[0];
-//                     if (d.getElementById(id)) return;
-//                     js = d.createElement(s); js.id = id;
-//                     js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-//                     fjs.parentNode.insertBefore(js, fjs);
-//                 }
-//                 (document, 'script', 'facebook-jssdk')
-//                 )
-//                 `;
-//                 document.body.append(script);
-//     },2000)
-// }
+function ShowshareBtn() {
+        var meta = document.createElement('meta');
+        meta.setAttribute("property","og:url");
+        meta.setAttribute("content",`${encodeURI(window.location) }`);
+        document.head.appendChild(meta);
+        domtoimage.toPng(document.querySelector("main"))
+            .then(function (dataUrl) {
+                console.log(dataUrl)
+                var meta = document.createElement('meta');
+                meta.setAttribute("property", "og:image");
+                meta.setAttribute("content", `${dataUrl}`);
+                // document.head.appendChild(meta);
+        })
+        .catch(function (error) {
+                alert("There is an error please, reload the page and retry again");
+        });
+    setTimeout(() => {
+            let div = document.createElement("div");
+            div.className = 'shareWithFacebook';
+        div.innerHTML = `
+              <div id="fb-root"></div>
+<div class="fb-share-button" data-href="https://generaltests.github.io/app/" data-layout="button_count"></div>`;
+            document.querySelector(".showReslut_QuestAns").append(div);
+            document.querySelector(".shareWithFacebook").style.opacity = '1';
+            document.querySelector(".shareWithFacebook").style.marginTop = '0px';
+            document.querySelector(".shareWithFacebook").style.marginBottom = '20px';
+            let script = document.createElement("script");
+            script.innerHTML = `
+            (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+                `;
+                document.body.append(script);
+    },2000)
+}
