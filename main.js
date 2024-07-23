@@ -124,9 +124,12 @@ myrequest.onreadystatechange = function(){
         <section class="logo">
             <span>Tests</span><span><img src="ExamIcon.png" width='40'></span>
         </section>
+        <section class="logOut" onclick='LogOut()'>
+            <span class='logOutText'>تسجيل الخروج</span><span><img src="logOut.png" width="40"></span>
+        </section>
         <section class="changeExamLevelAgain">
             <label for="changeExamLevelAgain">
-            مدى صعوبة الإختبار
+            تغيير صعوبة الإختبار
                <select id="changeExamLevelAgain">
                     <option value="EasyQuestion">بسيط</option>
                     <option value="CenterQuestion">متوسط</option>
@@ -392,12 +395,13 @@ function QuestionsInnerHtml(jsitems) {
             setTimeout(() => {
                 spS[i].innerHTML = '';
                 document.querySelector(`.${jsitems[i]["optionClicked"]}`).checked = 'true';
-            },500)
+            }, 500)
+            // log out from Exam
         }
         }     
         // add bg color
         }
-    },500)
+    }, 500)
 };
         }
     }
@@ -605,4 +609,34 @@ function ShowshareBtn() {
                 `;
                 document.body.append(script);
     },2000)
+}
+function LogOut() {
+    // let img = document.createElement("img");
+    // img.src = 'sad.png';
+    // img.width = '150';
+    // img.alt = 'very sad';
+    let sect = document.createElement("section");
+    sect.className = 'WantToLogout';
+    document.body.append(sect);
+    console.log(document.querySelector(".WantToLogout"))
+    document.querySelector(".WantToLogout").innerHTML=`
+    <article class="article">
+    <img src='sad.png' width='150'>
+    <p>
+        لم يكن الموقع ممتعا من دونك <span> هل انت متأك من انك تريد تسجيل الخروج من الموقع</span>
+    </p>
+    <div>
+        <button id="sureToLogOutExam">نعم</button>
+        <button id="notSureToLogOutExam">لا</button>
+    </div>
+    </article>`
+     ;
+    document.querySelector("#sureToLogOutExam").onclick = () => {
+        localStorage.clear();
+        location.reload();
+    }
+    // not sure To log out from exam
+    document.querySelector("#notSureToLogOutExam").onclick = () => {
+        document.querySelector(".WantToLogout").remove();
+    }
 }
