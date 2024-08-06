@@ -23,7 +23,10 @@
     justify-content: space-around;
     flex-direction: column;
 }
-
+.alertSection .alert span{
+    width: 90%;
+    font-weight: bolder;
+}
 .alertSection .alert button {
     width: 200px;
     height: 60px;
@@ -44,9 +47,7 @@
     width: 100%;
     height: 100%;
     display: flex;align-items: center;justify-content: center;
-    background-color: rgba(255, 255, 255, 0.405);
 }
-
 .WantToRelaodExam article{
     width: 550px;
     height: 400px;
@@ -70,6 +71,12 @@
         margin-bottom: 100px;
         opacity: 1;
     }
+}
+.WantToRelaodExam article h3{
+    display: flex;align-items: center;justify-content: center;
+    flex-wrap: wrap;
+    line-height: 30px;
+    text-align: center;
 }
 .WantToRelaodExam article a{
     color: rgb(198, 136, 255);

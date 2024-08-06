@@ -19,10 +19,9 @@
         font-size: medium;
     }
     .Exam .btn button{
-        height: 40px;
-        width: 100px;
-        font-size: small;
-        padding: 5px;
+        height: 50px;
+        width: 120px;
+        font-size: medium;
     }
     .LevelLine span {
     height: 15px;
@@ -38,6 +37,15 @@
     }
     .results{
         width: 600px;
+    }
+    .results .content .resultscontent .question{
+        font-size: large;
+    }
+    .results .content .resultscontent .options div{
+        font-size: medium;
+    }
+    .QuestionNameHeader .questionName{
+        font-size: large;
     }
 }
 @media (max-width:650px){
@@ -130,7 +138,7 @@
         margin-top: 50px;
     }
     .answers{
-        height: 275px !important;
+        height: 110px !important;
         margin-top: 50px;
     }.Exam .btn button{
         width: 120px;
@@ -158,6 +166,18 @@
         font-weight: bolder;
     }
 
+}
+@media (max-width:320px){
+    .Exam .question{
+        margin-bottom: 25px;
+    }
+    .Exam .answers{
+        margin-top: -80px !important;
+        gap: 5px !important;
+    }
+    .Exam .btn{
+        margin-top: 50px !important;
+    }
 }
 @media (max-width:410px){
     .WelcomeMass{
@@ -196,9 +216,43 @@
     .userName input::placeholder{
         font-size: medium;
     }
+    .answers div ,.answers div label{
+        padding: 0;
+        line-height: 50px !important;
+        font-size: 14px !important;
+    }
+    .answers div{
+        height: 50px !important;
+        display: flex;align-items: center;justify-content: space-between;
+        padding: 0 10px;
+    }
+    .results .content .resultscontent .question{
+        font-size: medium;
+    } 
 }
 @media (max-width:300px){
     .logOutText{
         display: none;
     }
+}
+@media (max-width:600px){
+    .WantToRelaodExam article h3{
+        flex-direction: row-reverse;
+    }
+}
+@media (max-width:430px){
+    .results .message{
+        width: 96% !important;
+        padding: 0 2% !important;
+    }
+}
+@media (max-width:350px){
+    .results .message{
+        position: absolute;
+        bottom: 5px;
+        width: 80% !important;
+    }
+    .results .message h3{
+        display: none;
+    } 
 }

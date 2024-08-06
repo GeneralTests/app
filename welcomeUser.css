@@ -11,7 +11,7 @@
 }
 .WelcomeMass #WelcomeMass_img2{
     position: absolute;
-    top: -36px;
+    top: -50px;
     right: 50%;
     transform: translateX(50%);
 }
@@ -80,9 +80,9 @@
 }
 /* الواجهة الثانية */
 .WelcomeMass h3{
-    height: 100px;
     text-align: center;
     line-height: 70px;
+    margin-top: 50px;
 }
 .WelcomeMass .userName{
     display: flex;
@@ -110,6 +110,8 @@
     text-align: center;
     font-size: 17.5px;
     font-weight: bolder;
+    display: block;
+    width: 100% !important;
 }
 .WelcomeMass .chooses{
     width: 100%;

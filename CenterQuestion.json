@@ -9,6 +9,7 @@
         "option4":"جامعة هارفارد",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الأول",
         "userAnswer":""
     },
@@ -22,6 +23,7 @@
         "option4":"تسعة أرجل",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثاني",
         "userAnswer":""
     },
@@ -35,6 +37,7 @@
         "option4":"الأسد",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثالث",
         "userAnswer":""
     },
@@ -48,6 +51,7 @@
         "option4":"جابر ابن حيان",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الرابع",
         "userAnswer":""
     },
@@ -61,6 +65,7 @@
         "option4":"بلجيكا",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الخامس",
         "userAnswer":""
     },
@@ -74,6 +79,7 @@
         "option4":"جبل افرست",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السادس",
         "userAnswer":""
     },
@@ -87,6 +93,7 @@
         "option4":"مصر",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السابع",
         "userAnswer":""
     },
@@ -100,6 +107,7 @@
         "option4":"عمان",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثامن",
         "userAnswer":""
     },
@@ -113,6 +121,7 @@
         "option4":"امريكا",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال التاسع",
         "userAnswer":""
     },
@@ -126,6 +135,7 @@
         "option4":"اللعب",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال العاشر",
         "userAnswer":""
     }

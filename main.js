@@ -21,6 +21,9 @@ window.onload = () => {
         <section class="logo">
             <span>Tests</span><span><img src="ExamIcon.png" width='40'></span>
         </section>
+        <section class="logOut" onclick='LogOut()'>
+            <span class='logOutText'>تسجيل الخروج</span><span><img src="logOut.png" width="40"></span>
+        </section>
         <section class="changeExamLevelAgain">
             <label for="changeExamLevelAgain">
             مدى صعوبة الإختبار
@@ -34,27 +37,34 @@ window.onload = () => {
         `;
         document.body.append(HeaderHTML)
         document.querySelector(".changeExamLevelAgain").remove();
-        document.body.classList.add("Body_BG_img_class")
+        document.body.classList.add("Body_BG_img_class")    
         document.body.innerHTML += `
-            <section class="WantToRelaodExam">
-                <article class="content">
-                    <h3>لقد انهيت هذا الإختبار من قبل يا ${window.localStorage.getItem("userName")} هل تريد <a href="" onclick='localStorage.setItem("isPass",false);location.reload();'>إعادة الإختبار </a></h3>
-                    <br>
-                    : او
-                    <br>
-                    <div>
-                        <span>
-                            <select id="ChangeExamWithUserAgainInAlert">
-                                <option value="EasyQuestion">بسيطة</option>
-                                <option value="CenterQuestion">متوسطة</option>
-                                <option value="HardQuestion">عميقة</option>
-                            </select>
-                            <small style="font-size: small;">"اختر من هذه القائمة"</small>
-                        </span>
-                        تجربة إختبار آخر ذو صعوبة
-                    </div>
-                </article>
-            </section>`;
+            <main>
+                <section class="WantToRelaodExam">
+                    <article class="content">
+                        <h3>لقد انهيت هذا الإختبار من قبل يا ${window.localStorage.getItem("userName")} <span style='width='3px'></span>
+                            <div>
+                                <a href="" onclick='localStorage.setItem("isPass",false);location.reload();'>إعادة الإختبار </a>
+                                ام <a href="" onclick='showResultAgain()'>عرض النتيجة </a>  هل تريد  
+                            </div>
+                        </h3>
+                        <br>
+                        : او
+                        <br>
+                        <div>
+                            <span>
+                                <select id="ChangeExamWithUserAgainInAlert">
+                                    <option value="EasyQuestion">بسيطة</option>
+                                    <option value="CenterQuestion">متوسطة</option>
+                                    <option value="HardQuestion">عميقة</option>
+                                </select>
+                                <small style="font-size: small;">"اختر من هذه القائمة"</small>
+                            </span>
+                            تجربة إختبار آخر ذو صعوبة
+                        </div>
+                    </article>
+                </section>
+            </main>`;
             
             let ChangeExamWithUserAgainInAlert = document.querySelector("#ChangeExamWithUserAgainInAlert");
             ChangeExamWithUserAgainInAlert.value = window.localStorage.getItem("ExamLevel");
@@ -214,45 +224,50 @@ function QuestionsInnerHtml(jsitems) {
         }
         if (jsitems[i]["optionsCount"]=="4") {
             document.querySelector(".answers").innerHTML = `
-               <div class="option1">
-                    <input type="radio" name="1" class="FiRadQe one option11" id="rad1">
+               <div class="option1 optDiv">
+                    <input type="radio" name="1" class="FiRadQe one option11 option1" id="rad1">
                     <label id="one" for="rad1">${jsitems[i]["option1"]}</label>
                </div>
-               <div class="option2">
-                    <input type="radio" name="1" class="FiRadQe two option12" id="rad2">
+               <div class="option2 optDiv">
+                    <input type="radio" name="1" class="FiRadQe two option12 option2" id="rad2">
                     <label id="two" for="rad2">${jsitems[i]["option2"]}</label>
                </div>
-                <div class="option3">
-                    <input type="radio" name="1" class="FiRadQe three option13" id="rad3">
+                <div class="option3 optDiv">
+                    <input type="radio" name="1" class="FiRadQe three option13 option3" id="rad3">
                     <label id="three" for="rad3">${jsitems[i]["option3"]}</label>
                 </div>
-                <div class="option4">
-                   <input type="radio" name="1" class="FiRadQe four option14" id="rad4">
+                <div class="option4 optDiv">
+                   <input type="radio" name="1" class="FiRadQe four option14 option4" id="rad4">
                    <label id="four" for="rad4">${jsitems[i]["option4"]}</label>
                 </div>`
         } else {
             document.querySelector(".answers").innerHTML = `
-                <div class="options3_1">
-                    <input type="radio" name="1" class="FiRadQe one option11" id="rad1">
+                <div class="options3_1 optDiv">
+                    <input type="radio" name="1" class="FiRadQe one option11 options3_1" id="rad1">
                     <label id="one" for="rad1">${jsitems[i]["option1"]}</label>
                 </div>
-                <div class="options3_2">
-                    <input type="radio" name="1" class="FiRadQe two option12" id="rad2">
+                <div class="options3_2 optDiv">
+                    <input type="radio" name="1" class="FiRadQe two option12 options3_2" id="rad2">
                     <label id="two" for="rad2">${jsitems[i]["option2"]}</label>
                 </div>
-                <div class="options3_3">
-                    <input type="radio" name="1" class="FiRadQe three option13" id="rad3">
+                <div class="options3_3 optDiv">
+                    <input type="radio" name="1" class="FiRadQe three option13 options3_3" id="rad3">
                     <label id="three" for="rad3">${jsitems[i]["option3"]}</label>
                 </div>`;
             // add gap between Exam divs options
         }
         document.querySelector(`.Exam`).style.animationName = 'Come';
-        let optionsClass = document.querySelector(`.Exam${i}`).getAttribute("data-option");
+        let optionsClass = document.querySelector(`.Exam${i}`).getAttribute("data-option");    
         let options = document.querySelectorAll(`.${optionsClass}`);
         options.forEach((option) => {
             option.onclick = function () {
                 jsitems[i]["userAnswer"] = document.querySelector(`#${option.classList[1]}`).innerHTML;;
                 jsitems[i]["optionClicked"] = this.classList[2];
+                jsitems[i]["parentOptionClicked"] = this.classList[3];
+                document.querySelectorAll(".optDiv").forEach((div) => {
+                    div.style.background = 'rgb(88, 0, 0)';
+                })
+                document.querySelector(`.${this.classList[3]}`).style.background = '#9d0000';
             }
         });
         if(jsitems[i]["optionClicked"] !=''){
@@ -332,7 +347,11 @@ function QuestionsInnerHtml(jsitems) {
                 countUp = 0;
                 rightanswerUp = 0;
                 wronganswerUp = 0;
-                rightAnswers=Math.round(rightAnswers)
+                rightAnswers = Math.round(rightAnswers)
+                // Put data in localStoreage
+                localStorage.setItem("persent", rightAnswers);
+                localStorage.setItem("rightanswersNumber", rightanswersNumber);
+                localStorage.setItem("wronganswersNumber", wronganswersNumber);
                 setInterval(() => {
                     if (countUp < rightAnswers) {  
                         countUp = countUp + 1;
@@ -367,7 +386,7 @@ function QuestionsInnerHtml(jsitems) {
                         isOPN = true;
                     }
                 }, 300)
-                ShowshareBtn();
+                // ShowshareBtn();
             },5000)   
         }
             }       
@@ -395,6 +414,7 @@ function QuestionsInnerHtml(jsitems) {
             setTimeout(() => {
                 spS[i].innerHTML = '';
                 document.querySelector(`.${jsitems[i]["optionClicked"]}`).checked = 'true';
+                document.querySelector(`.${jsitems[i]["parentOptionClicked"]}`).style.background = '#9d0000';
             }, 500)
             // log out from Exam
         }
@@ -490,7 +510,6 @@ function ShowUserAnswerResultItems(resultContainar) {
             document.querySelector(`.options .${GlobalJsItems[index]["rightAnswerClass"]}`).classList.add("rightResult");
         }
 }
-
 index = 0;
 function back(containar) {
     if (index < GlobalJsItems.length) {
@@ -611,10 +630,6 @@ function ShowshareBtn() {
     },2000)
 }
 function LogOut() {
-    // let img = document.createElement("img");
-    // img.src = 'sad.png';
-    // img.width = '150';
-    // img.alt = 'very sad';
     let sect = document.createElement("section");
     sect.className = 'WantToLogout';
     document.body.append(sect);
@@ -623,7 +638,7 @@ function LogOut() {
     <article class="article">
     <img src='sad.png' width='150'>
     <p>
-        لم يكن الموقع ممتعا من دونك <span> هل انت متأك من انك تريد تسجيل الخروج من الموقع</span>
+        لن يكون الموقع ممتعا من دونك <span> هل انت متأك من انك تريد تسجيل الخروج من الموقع</span>
     </p>
     <div>
         <button id="sureToLogOutExam">نعم</button>

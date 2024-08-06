@@ -9,6 +9,7 @@
         "option4":"حيوان السيلانكون",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الأول",
         "userAnswer":""
     },
@@ -22,6 +23,7 @@
         "option4":"خندق ازاكيزي",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثاني",
         "userAnswer":""
     },
@@ -34,6 +36,7 @@
         "option3":"ثماني مليارات نسمة",
         "optionsCount":"3",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثالث",
         "userAnswer":""
     },
@@ -47,6 +50,7 @@
         "option4":" الصحراء الكبرى",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الرابع",
         "userAnswer":""
     },
@@ -60,6 +64,7 @@
         "option4":"هرم منكاورع",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الخامس",
         "userAnswer":""
     },
@@ -73,6 +78,7 @@
         "option4":"1995",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السادس",
         "userAnswer":""
     },
@@ -86,6 +92,7 @@
         "option4":"العراق",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السابع",
         "userAnswer":""
     },
@@ -98,6 +105,7 @@
         "option3":"ثمانية كيلومترات تقريبا",
         "optionsCount":"3",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثامن",
         "userAnswer":""
     },
@@ -111,6 +119,7 @@
         "option4":"اثنين كيلومتر",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال التاسع",
         "userAnswer":""
     },
@@ -124,6 +133,7 @@
         "option4":"الجماد",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال العاشر",
         "userAnswer":""
     }

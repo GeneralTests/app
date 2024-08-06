@@ -10,7 +10,7 @@ function showGetUserDataFace(button) {
             </div>
         </section>
         <section class="WelcomeMass">
-        <img src='ExamIcon.png' id='WelcomeMass_img2' width='50'>
+        <img src='ExamIcon.png' id='WelcomeMass_img2' width='100'>
         <h3>للمتابعة يرجى كتابة اسمك وتحديد مدى صعوبة الإختبار</h3>
         <div class="userName">
             <input type="text" dir="auto" id="userName" placeholder="اكتب إسمك " maxlength="20">

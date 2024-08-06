@@ -9,6 +9,7 @@
         "option4":"نهر النيل",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الأول",
         "userAnswer":""
     },
@@ -22,6 +23,7 @@
         "option4":"قارة انتركتيكا",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثاني",
         "userAnswer":""
     },
@@ -34,6 +36,7 @@
         "option3":"سيدنا عمر بن عبد العزيز",
         "optionsCount":"3",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثالث",
         "userAnswer":""
     },
@@ -47,6 +50,7 @@
         "option4":"جبنة",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الرابع",
         "userAnswer":""
     },
@@ -60,6 +64,7 @@
         "option4":"الصين",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الخامس",
         "userAnswer":""
     },
@@ -73,6 +78,7 @@
         "option4":"فرنسا",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السادس",
         "userAnswer":""
     },
@@ -86,6 +92,7 @@
         "option4":"الجزائر",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال السابع",
         "userAnswer":""
     },
@@ -99,6 +106,7 @@
         "option4":"عمان",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال الثامن",
         "userAnswer":""
     },
@@ -112,6 +120,7 @@
         "option4":"العراق",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال التاسع",
         "userAnswer":""
     },
@@ -125,6 +134,7 @@
         "option4":"روسيا",
         "optionsCount":"4",
         "optionClicked":"",
+        "parentOptionClicked":"",
         "questionName":"السؤال العاشر",
         "userAnswer":""
     }
